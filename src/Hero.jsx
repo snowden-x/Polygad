@@ -26,7 +26,7 @@ const Hero = () => {
                                     <img className="object-cover w-full h-auto" src={Plates} alt="Plates" />
                                 </div>
                                 <div>
-                                    <img className="object-cover mt-44 w-full h-auto" src={PrintM} alt="Printing Machine" />
+                                    <img className="object-cover w-full h-auto" src={PrintM} alt="Printing Machine" />
                                 </div>
                                 <div>
                                     <img className="object-cover w-full h-auto" src={Softbottle} alt="Bottles" />
@@ -84,7 +84,7 @@ const Hero = () => {
             <Testimonials></Testimonials>
             <Stats></Stats>
             <Faq></Faq>
-            <MapComponent></MapComponent>
+            
         </div>
 
     )
