@@ -122,7 +122,7 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-4 shadow-lg sm:p-12 border-2 border-indigo-300">
-                <form onSubmit={handleSubmit}>
+                <form action="https://formspree.io/f/xkndvdoy" method="POST">
                   <ContactInputBox
                     type="text"
                     name="name"
@@ -130,7 +130,7 @@ const Contact = () => {
                     required
                   />
                   <ContactInputBox
-                    type="text"
+                    type="email"
                     name="email"
                     placeholder="Your Email"
                   />
@@ -183,7 +183,7 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
   );
 };
 
-const ContactInputBox = ({ type, placeholder, name }) => {
+const ContactInputBox = ({ type, placeholder, name, required }) => {
   return (
     <>
       <div className="mb-6">
@@ -191,6 +191,7 @@ const ContactInputBox = ({ type, placeholder, name }) => {
           type={type}
           placeholder={placeholder}
           name={name}
+          required = {required}
           className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-indigo-500"
         />
       </div>
