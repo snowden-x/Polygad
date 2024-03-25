@@ -4,6 +4,11 @@ import PackBag from './assets/packbag.webp'
 import Rubbbag from './assets/rubber.webp'
 import Chairs from './assets/plastchairs.webp'
 import Cups from './assets/plascups.webp'
+import Tables from  './assets/tables.webp'
+import Bins from  './assets/bins.webp'
+import Rolls from  './assets/polythene.webp'
+import Tanks from  './assets/tanks.webp'
+import Sachets from  './assets/sachets.webp'
 
 const products = [
 
@@ -55,6 +60,46 @@ const products = [
       price: 'Cups',
       imageSrc: Cups,
       imageAlt: 'Cups',
+    },
+    {
+      id: 7,
+      name: 'Tables',
+      href: '#',
+      price: 'Tables',
+      imageSrc: Tables,
+      imageAlt: 'Tables',
+    },
+    {
+      id: 8,
+      name: 'Rolls',
+      href: '#',
+      price: 'Rolls',
+      imageSrc: Rolls,
+      imageAlt: 'Rolls',
+    },
+    {
+      id: 9,
+      name: 'Tanks',
+      href: '#',
+      price: 'Tanks',
+      imageSrc: Tanks,
+      imageAlt: 'Tanks',
+    },
+    {
+      id: 10,
+      name: 'Bins',
+      href: '#',
+      price: 'Bins',
+      imageSrc: Bins,
+      imageAlt: 'Bins',
+    },
+    {
+      id: 11,
+      name: 'Sachets',
+      href: '#',
+      price: 'Sachet Rolls',
+      imageSrc: Sachets,
+      imageAlt: 'Sachets',
     },
     // More products...
   ]

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import Cups from './assets/cups.jpg'
-import Plates from './assets/platescup.jpg'
-import Softbottle from './assets/softbottle.jpg'
+import Cups from './assets/cups.webp'
+import Plates from './assets/platescup.webp'
+import Softbottle from './assets/softbottle.webp'
+import Watbottle from './assets/watbottles.webp'
+import PrintM from './assets/printm.webp'
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Badge } from '@radix-ui/themes';
@@ -10,6 +12,7 @@ import Testimonials from './Testimonials';
 import Services from './Services';
 import OurMission from './OurMission';
 import Stats from './Stats';
+import MapComponent from './MapComponent';
 
 const Hero = () => {
     return (
@@ -20,14 +23,18 @@ const Hero = () => {
                         <div className="absolute inset-0">
                             <Carousel autoPlay infiniteLoop showIndicators={false} showThumbs={false} showStatus={false} className="my-carousel">
                                 <div>
-                                    <img className="object-cover w-full h-auto" src={Plates} alt="" />
+                                    <img className="object-cover w-full h-auto" src={Plates} alt="Plates" />
                                 </div>
                                 <div>
-                                    <img className="object-cover w-full h-auto" src={Softbottle} alt="" />
+                                    <img className="object-cover mt-44 w-full h-auto" src={PrintM} alt="Printing Machine" />
                                 </div>
                                 <div>
-                                    <img className="object-cover w-full h-auto" src={Cups} alt="" />
+                                    <img className="object-cover w-full h-auto" src={Softbottle} alt="Bottles" />
                                 </div>
+                                <div>
+                                    <img className="object-cover w-full h-auto" src={Cups} alt="Cups" />
+                                </div>
+
                             </Carousel>
                         </div>
 
@@ -77,6 +84,7 @@ const Hero = () => {
             <Testimonials></Testimonials>
             <Stats></Stats>
             <Faq></Faq>
+            <MapComponent></MapComponent>
         </div>
 
     )

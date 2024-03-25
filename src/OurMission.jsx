@@ -1,5 +1,5 @@
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon, UserGroupIcon, BoltIcon , ChartPieIcon} from '@heroicons/react/20/solid'
-import MissionImage from './assets/3rs.jpg'
+import MissionImage from './assets/watbottles.webp'
 
 export default function OurMission() {
   return (
