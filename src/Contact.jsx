@@ -5,7 +5,7 @@ const Contact = () => {
 
   const handleSubmit = (event) => {
     // clear the form
-    event.target.reset();
+    // event.target.reset();
 
 
   };
@@ -137,6 +137,7 @@ const Contact = () => {
                     type="email"
                     name="email"
                     placeholder="Your Email"
+                    required
                   />
                   <ContactInputBox
                     type="text"
