@@ -9,6 +9,7 @@ import Bins from  './assets/bins.webp'
 import Rolls from  './assets/polythene.webp'
 import Tanks from  './assets/tanks.webp'
 import Sachets from  './assets/sachets.webp'
+import { useEffect, useState } from 'react';
 
 const products = [
 
@@ -105,7 +106,27 @@ const products = [
   ]
   
   export default function Products() {
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+      const loadImages = async () => {
+        const loadAll = products.map(product => {
+          return new Promise((resolve, reject) => {
+            const loadImg = new Image();
+            loadImg.src = product.imageSrc;
+            loadImg.onload = () => resolve(product.id);
+            loadImg.onerror = err => reject(err);
+          });
+        });
+        await Promise.all(loadAll);
+        setLoading(false);
+      };
+      loadImages();
+    }, []);
+  
+    
     return (
+      loading ? <div className="loader"></div> :
       <div className="bg-white">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <div className="max-w-md mx-auto mt-8 text-center">
