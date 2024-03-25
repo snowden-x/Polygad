@@ -2,12 +2,59 @@ import React from "react";
 import { useState } from "react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    details: ""
+  });
 
-  const handleSubmit = (event) => {
-    // clear the form
-    // event.target.reset();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      // You can perform form submission here
+      await submitForm(formData);
+      // Clear the form after successful submission
+      clearForm();
+    } catch (error) {
+      console.error("Form submission failed:", error);
+      // Handle error if form submission fails
+    }
+  };
+  const submitForm = async (data) => {
+    try {
+      const response = await fetch('https://formspree.io/f/xkndvdoy', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      if (!response.ok) {
+        throw new Error('Failed to submit form');
+      }
+      // Form submission successful
+    } catch (error) {
+      console.error('Form submission error:', error);
+      // Handle error if form submission fails
+    }
+  };
 
+  const clearForm = () => {
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      details: ""
+    });
+  };
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value
+    }));
   };
 
   return (
@@ -131,24 +178,32 @@ const Contact = () => {
                     type="text"
                     name="name"
                     placeholder="Your Name"
+                    value={formData.name} // Here, value is passed from the state
+                    onChange={handleChange}
                     required
                   />
                   <ContactInputBox
                     type="email"
                     name="email"
                     placeholder="Your Email"
+                    value={formData.email} // Here, value is passed from the state
+                    onChange={handleChange}
                     required
                   />
                   <ContactInputBox
                     type="text"
                     name="phone"
                     placeholder="Phone Number"
+                    value={formData.phone} // Here, value is passed from the state
+                    onChange={handleChange}
                   />
                   <ContactTextArea
                     row="6"
                     type="text"
                     placeholder="Your Message"
                     name="details"
+                    value={formData.details} // Here, value is passed from the state
+                    onChange={handleChange}
                     defaultValue=""
                   />
                   <div>
@@ -172,7 +227,7 @@ const Contact = () => {
 
 export default Contact;
 
-const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
+const ContactTextArea = ({ row, placeholder, name, defaultValue, value, onChange }) => {
   return (
     <>
       <div className="mb-6">
@@ -182,13 +237,15 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
           name={name}
           className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-indiho-500"
           defaultValue={defaultValue}
+          value={value}
+          onChange={onChange}
         />
       </div>
     </>
   );
 };
 
-const ContactInputBox = ({ type, placeholder, name, required }) => {
+const ContactInputBox = ({ type, placeholder, name, required, value, onChange }) => {
   return (
     <>
       <div className="mb-6">
@@ -196,6 +253,8 @@ const ContactInputBox = ({ type, placeholder, name, required }) => {
           type={type}
           placeholder={placeholder}
           name={name}
+          value={value}
+          onChange={onChange}
           required = {required}
           className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-indigo-500"
         />
