@@ -2,18 +2,13 @@ import React from "react";
 import { useState } from "react";
 
 const Contact = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
-  const [details, setDetails] = useState('');
-    const handleSubmit = (event) => {   
-      // clear the 
-      setName('');
-      setEmail('');
-      setPhone('');
-      setDetails('');
 
-    };
+  const handleSubmit = (event) => {
+    // clear the form
+    event.target.reset();
+
+
+  };
 
   return (
     <>
