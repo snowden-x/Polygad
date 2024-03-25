@@ -1,9 +1,17 @@
 import React from "react";
 
 const Contact = () => {
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        // handle form submission here
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [details, setDetails] = useState('');
+    const handleSubmit = (event) => {   
+      // clear the form
+      setName('');
+      setEmail('');
+      setPhone('');
+      setDetails('');
+
     };
 
   return (
