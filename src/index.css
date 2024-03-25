@@ -1,0 +1,28 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+
+.my-carousel .control-arrow.control-prev, 
+.my-carousel .control-arrow.control-next {
+  display: none;
+}
+.active-link {
+  position: relative;
+}
+
+.active-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Adjust the distance from the text */
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid blue; /* Adjust the color and thickness as needed */
+}
+
