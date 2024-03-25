@@ -10,17 +10,6 @@ import MapComponent from './MapComponent'
 import './App.css';
 
 function App() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    window.onload = () => {
-      setLoading(false);
-    };
-  }, []);
-
-  if (loading) {
-    return <div className="loader"></div>; // This div will show the loading animation
-  }
 
 
 

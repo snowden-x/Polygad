@@ -3,33 +3,8 @@ import OurStory from './OurStory';
 import Ceo from './assets/ceo1.jpg'
 
 const About = () => {
-    const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const loadImages = async () => {
-            const loadAll = [
-                new Promise((resolve, reject) => {
-                    const loadImg = new Image();
-                    loadImg.src = Ceo;
-                    loadImg.onload = () => resolve();
-                    loadImg.onerror = err => reject(err);
-                }),
-                new Promise((resolve, reject) => {
-                    const loadImg = new Image();
-                    loadImg.src = "https://cdn.rareblocks.xyz/collection/clarity/images/team/1/team-member-2.png";
-                    loadImg.onload = () => resolve();
-                    loadImg.onerror = err => reject(err);
-                }),
-            ];
-            await Promise.all(loadAll);
-            setLoading(false);
-        };
-        loadImages();
-    }, []);
 
-    if (loading) {
-        return <div className="loader"></div>;
-    }
     return (
 
         <section className="py-12 bg-white sm:py-16 lg:py-20">
