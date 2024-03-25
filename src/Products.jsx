@@ -13,7 +13,7 @@ const products = [
       name: 'Packaging Bag',
       href: '#',
       price: 'Packaging Bags',
-    
+      imageSrc: PackBag,
       imageAlt: 'Packaging Bag',
     },
     {
