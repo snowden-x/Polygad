@@ -53,7 +53,7 @@ function Header() {
                             }}
                             className={({ isActive }) =>
                                 isActive
-                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 border-b-2 border-indigo-600"
+                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 lg:border-b-2 lg:border-indigo-600"
                                     : "block py-2 text-lg font-semibold text-black transition-all duration-200 hover:text-opacity-80"
                             }
                         >
@@ -68,7 +68,7 @@ function Header() {
                             }}
                             className={({ isActive }) =>
                                 isActive
-                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 border-b-2 border-indigo-600"
+                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 lg:border-b-2 lg:border-indigo-600"
                                     : "block py-2 text-lg font-semibold text-black transition-all duration-200 hover:text-opacity-80"
                             }
                         >
@@ -83,7 +83,7 @@ function Header() {
                             }}
                             className={({ isActive }) =>
                                 isActive
-                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 border-b-2 border-indigo-600"
+                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 lg:border-b-2 lg:border-indigo-600"
                                     : "block py-2 text-lg font-semibold text-black transition-all duration-200 hover:text-opacity-80"
                             }
                         >
@@ -97,7 +97,7 @@ function Header() {
                             }}
                             className={({ isActive }) =>
                                 isActive
-                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 border-b-2 border-indigo-600"
+                                    ? "block py-2 text-lg font-semibold transition-all duration-200 hover:text-opacity-80 text-indigo-600 lg:border-b-2 lg:border-indigo-600"
                                     : "block py-2 text-lg font-semibold text-black transition-all duration-200 hover:text-opacity-80"
                             }
                         >
