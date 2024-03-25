@@ -1,9 +1,9 @@
-import Plates from './assets/plastplates.jpg'
-import PetBottle from './assets/petbottle.jpg'
-import PackBag from './assets/packbag.jpg'
-import Rubbbag from './assets/rubber.jpg'
-import Chairs from './assets/plastchairs.jpg'
-import Cups from './assets/plascups.jpg'
+import Plates from './assets/plastplates.webp'
+import PetBottle from './assets/petbottle.webp'
+import PackBag from './assets/packbag.webp'
+import Rubbbag from './assets/rubber.webp'
+import Chairs from './assets/plastchairs.webp'
+import Cups from './assets/plascups.webp'
 
 const products = [
 
@@ -13,7 +13,7 @@ const products = [
       name: 'Packaging Bag',
       href: '#',
       price: 'Packaging Bags',
-      imageSrc: PackBag,
+    
       imageAlt: 'Packaging Bag',
     },
     {
