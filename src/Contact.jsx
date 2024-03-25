@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -6,7 +7,7 @@ const Contact = () => {
   const [phone, setPhone] = useState('');
   const [details, setDetails] = useState('');
     const handleSubmit = (event) => {   
-      // clear the form
+      // clear the 
       setName('');
       setEmail('');
       setPhone('');
@@ -130,7 +131,7 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-4 shadow-lg sm:p-12 border-2 border-indigo-300">
-                <form action="https://formspree.io/f/xkndvdoy" method="POST">
+                <form onSubmit={handleSubmit} action="https://formspree.io/f/xkndvdoy" method="POST">
                   <ContactInputBox
                     type="text"
                     name="name"
