@@ -52,7 +52,18 @@ const Footer = () => {
 
                         <ul className="mt-6 space-y-4">
                             <li>
-                                <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> About </a>
+                                <NavLink
+                                    to="/about"
+                                    onClick={() => {
+                                        window.scrollTo(0, 0);
+                                    }}
+
+                                >
+                                    <p className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">About</p>
+
+
+
+                                </NavLink>                            
                             </li>
 
                             <li>
@@ -71,8 +82,18 @@ const Footer = () => {
                             </li>
 
                             <li>
-                                <a href="#" title="" className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> Products </a>
-                            </li>
+                                <NavLink
+                                    to="/products"
+                                    onClick={() => {
+                                        window.scrollTo(0, 0);
+                                    }}
+
+                                >
+                                    <p className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600">Products</p>
+
+
+
+                                </NavLink>                            </li>
 
                             <li>
                                 <p href="#" title="" className="flex text-base font-semibold text-center text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"> MON - FRI </p>
