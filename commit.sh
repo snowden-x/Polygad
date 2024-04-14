@@ -4,7 +4,7 @@
 cd /Polygad
 
 # Make changes to a file
-echo "This is a commit message." >> example.txt
+echo "This is a commit." >> example.txt
 
 # Stage changes
 git add .
