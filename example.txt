@@ -2,3 +2,4 @@ This is a commit message.
 This is a commit.
 This is not a commit.
 This is not a commit.
+This is not a commit.
