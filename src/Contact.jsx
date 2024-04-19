@@ -23,7 +23,7 @@ const Contact = () => {
   };
   const submitForm = async (data) => {
     try {
-      const response = await fetch('https://formspree.io/f/xkndvdoy', {
+      const response = await fetch('https://formspree.io/f/mrgnrpbo', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -173,7 +173,7 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-4 shadow-lg sm:p-12 border-2 border-indigo-300">
-                <form onSubmit={handleSubmit} action="https://formspree.io/f/xkndvdoy" method="POST">
+                <form onSubmit={handleSubmit} action="https://formspree.io/f/mrgnrpbo" method="POST">
                   <ContactInputBox
                     type="text"
                     name="name"
